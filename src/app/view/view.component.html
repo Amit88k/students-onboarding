@@ -1,0 +1,100 @@
+
+   <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="addNewStudentLabel" >
+      <div class="modal-dialog" role="document">
+      
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" (click)="onClose()">&times;</button>
+            <h4 class="modal-title"></h4>
+          </div>
+  
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="student name">Student Name</label>
+              <input name="studentName"  type="text" class="form-control" id="studentName_id" value="{{viewStudent.studentName}}" readonly/>
+            </div>
+            
+            <div class="form-group">
+              <label for="category">Category</label>
+              <input name="category" type="category" class="form-control" id="category_id"  value="{{viewStudent.category}}" readonly/>
+            </div>
+  
+            
+            <label class="custom-control-label" for="documents">Documents</label>
+              
+              <div class="form-group">
+                  <div class="checkbox disabled">
+                    <input type="checkbox" *ngIf="isDomicileChecked" value="" checked disabled>
+                    <input type="checkbox" *ngIf="!isDomicileChecked" value="" disabled>
+                    <label for="domicile">Domicile*</label>
+                  </div>
+              </div>
+
+            <div class="form-group">
+              <div class="checkbox disabled">
+                <input type="checkbox" *ngIf="isbirthCertificateChecked" value="" checked disabled>
+                <input type="checkbox" *ngIf="!isbirthCertificateChecked" value="" disabled>
+                <label for="domicile">Birth Certificate*</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox disabled">
+                  <input type="checkbox" *ngIf="ismarksheetsChecked" value="" checked disabled>
+                  <input type="checkbox" *ngIf="!ismarksheetsChecked" value="" disabled>
+                  <label for="domicile">Marksheets*</label>
+                </div>
+              </div>
+
+            <div class="form-group">
+                <div class="checkbox disabled">
+                  <input type="checkbox" *ngIf="ispoliceClearanceChecked" value="" checked disabled>
+                  <input type="checkbox" *ngIf="!ispoliceClearanceChecked" value="" disabled>
+                  <label for="domicile">Police Clearance*</label>
+                </div>
+              </div>
+
+            <div class="form-group">
+                <div class="checkbox disabled">
+                  <input type="checkbox" *ngIf="ispassportChecked" value="" checked disabled>
+                  <input type="checkbox" *ngIf="!ispassportChecked" value="" disabled>
+                  <label for="domicile">Passport*</label>
+                </div>
+              </div>
+
+            <div class="form-group">
+                <div class="checkbox disabled">
+                  <input type="checkbox" *ngIf="isdeclarationChecked" value="" checked disabled>
+                  <input type="checkbox" *ngIf="!isdeclarationChecked" value="" disabled>
+                  <label for="domicile">Declaration*</label>
+                </div>
+              </div>
+  
+            <div class="form-group">
+              <label for="dob">DOB</label>
+              <input name="dob" type="text" class="form-control" id="dob_id"  value="{{viewStudent.dob}}"/>
+            </div>
+  
+            <div class="form-group">
+              <label for="fatherName">Father's Name</label>
+              <input name="fatherName" type="text" class="form-control" id="fatherName_id"  value="{{viewStudent.fatherName}}" readonly/>
+            </div>
+  
+            <div class="form-group">
+              <label for="motherName">Mother's Name</label>
+              <input name="motherName" type="text" class="form-control" id="motherName_id"  value="{{viewStudent.motherName}}" readonly/>
+            </div>
+  
+            <div class="form-group">
+                <label for="lastClassScore">Last Class Score</label>
+                <input name="lastClassScore"  type="text" class="form-control" id="lastClassScore_id"  value="{{viewStudent.lastClassScore}}" readonly/>
+              </div>
+          
+          </div>
+  
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" (click)="onClose()">Close</button>
+          </div>
+        </div>
+        
+    </div>

@@ -1,0 +1,34 @@
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="addNewStudentLabel" >
+  <div class="modal-dialog" role="document">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">School Admin Login</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+      <div class="alert alert-danger text-danger" *ngIf="invalid">Invalid credentials</div>
+        <div class="form-group">
+          <label for="user name">User Name</label>
+          <input ngModel name="userName" #userName="ngModel" type="text" class="form-control" id="userName_id" placeholder="User name..."/>
+         </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input ngModel name="password" #password="ngModel" type="password" class="form-control" id="password_id" placeholder="Password..."/>
+        </div>
+
+      <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" (click)="validateAdmin(userName, password)">Login</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+    
+  <!-- </div> -->
+</div>

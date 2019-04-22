@@ -1,0 +1,150 @@
+
+   <div class="modal fade" id="editStudentRecordModal" tabindex="-1" role="dialog" aria-labelledby="addNewStudentLabel" >
+      <div class="modal-dialog" role="document">
+      
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" (click)="onClose()">&times;</button>
+            <h4 class="modal-title"></h4>
+          </div>
+  
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="student name">Student Name</label>
+              <input name="studentName" [(ngModel)]="studentName" type="text" class="form-control validate" id="studentName_id" value="{{viewStudent.studentName}}"  />
+            </div>
+            
+            <!-- <div class="form-group">
+              <label for="category">Category</label>
+              <input name="category" [(ngModel)]="category" type="category" class="form-control validate" id="category_id"  value="{{viewStudent.category}}" />
+            </div> -->
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select name="category" [(ngModel)]="category" type="category" class="form-control" id="category_id"  placeholder="Category..." >
+                <option *ngFor="let i of categories" [value]="i">{{i}}</option>
+                </select>
+              </div>
+  
+            
+            <label class="custom-control-label" for="documents">Documents</label>
+           
+            <div class="form-group">
+                <div class="checkbox  ">
+                  <input type="checkbox" name="domicile" [(ngModel)]="domicile" *ngIf="isDomicileChecked" value="" checked   id="domicile_id">
+                  <input type="checkbox" name="domicile" [(ngModel)]="domicile" *ngIf="!isDomicileChecked" value="" id="domicile_id" >
+                  <label for="domicile">Domicile*</label>
+                </div>
+            </div>
+
+          <div class="form-group">
+            <div class="checkbox  ">
+              <input type="checkbox" name="birthCertificate" [(ngModel)]="birthCertificate" *ngIf="isbirthCertificateChecked" value="" checked  id="birthCertificate_id">
+              <input type="checkbox" name="birthCertificate" [(ngModel)]="birthCertificate" *ngIf="!isbirthCertificateChecked" value="" id="birthCertificate_id" >
+              <label for="domicile">Birth Certificate*</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <div class="checkbox  ">
+                <input type="checkbox" name="marksheets" [(ngModel)]="marksheets" *ngIf="ismarksheetsChecked" value="" checked   id="marksheets_id"  >
+                <input type="checkbox" name="marksheets" [(ngModel)]="marksheets" *ngIf="!ismarksheetsChecked" value=""   id="marksheets_id" >
+                <label for="domicile">Marksheets*</label>
+              </div>
+            </div>
+
+          <div class="form-group">
+              <div class="checkbox  ">
+                <input type="checkbox" name="policeClearance" [(ngModel)]="policeClearance" *ngIf="ispoliceClearanceChecked" value="" checked id="policeClearance_id" >
+                <input type="checkbox" name="policeClearance" [(ngModel)]="policeClearance" *ngIf="!ispoliceClearanceChecked" value=""  id="policeClearance_id">
+                <label for="domicile">Police Clearance*</label>
+              </div>
+            </div>
+
+          <div class="form-group">
+              <div class="checkbox  ">
+                <input type="checkbox" name="passport" [(ngModel)]="passport" *ngIf="ispassportChecked" value="" checked id="passport_id" >
+                <input type="checkbox" name="passport" [(ngModel)]="passport" *ngIf="!ispassportChecked" value=""  id="passport_id">
+                <label for="domicile">Passport*</label>
+              </div>
+            </div>
+
+          <div class="form-group">
+              <div class="checkbox  ">
+                <input type="checkbox" name="declaration" [(ngModel)]="declaration" *ngIf="isdeclarationChecked" value="" checked id="declaration_id"  >
+                <input type="checkbox" name="declaration" [(ngModel)]="declaration" *ngIf="!isdeclarationChecked" value=""  id="declaration_id" >
+                <label for="domicile">Declaration*</label>
+              </div>
+            </div>
+            
+            <!-- <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input name="domicile" [(ngModel)]="domicile" type="checkbox" class="custom-control-input validate" id="domicile_id"  >
+                  <label class="custom-control-label" for="domicile">Domicile*</label>
+                </div>
+              </div>
+  
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="birthCertificate" [(ngModel)]="birthCertificate" type="checkbox" class="custom-control-input validate" id="birthCertificate_id"  >
+                <label class="custom-control-label" for="birthCertificate">Birth Certificate*</label>
+              </div>
+            </div>
+  
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input name="marksheets" [(ngModel)]="marksheets" type="checkbox" class="custom-control-input validate" id="marksheets_id"  >
+                  <label class="custom-control-label" for="marksheets">Marksheets*</label>
+                </div>
+            </div>
+  
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="policeClearance" [(ngModel)]="policeClearance" type="checkbox" class="custom-control-input" id="policeClearance_id"  >
+                <label class="custom-control-label" for="policeClearance">Police Clearance*</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="passport" [(ngModel)]="passport" type="checkbox" class="custom-control-input" id="passport_id"  >
+                <label class="custom-control-label" for="passport">Passport*</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="declaration" [(ngModel)]="declaration" type="checkbox" class="custom-control-input" id="declaration_id"  >
+                <label class="custom-control-label" for="declaration">Declaration*</label>
+              </div>
+            </div> -->
+  
+            <div class="form-group">
+              <label for="dob">DOB</label>
+              <input name="dob" [(ngModel)]="dob" type="date" class="form-control" id="dob_id"  value="{{viewStudent.dob}}"/>
+            </div>
+  
+            <div class="form-group">
+              <label for="fatherName">Father's Name</label>
+              <input name="fatherName" [(ngModel)]="fatherName" type="text" class="form-control" id="fatherName_id"  value="{{viewStudent.fatherName}}" />
+            </div>
+  
+            <div class="form-group">
+              <label for="motherName">Mother's Name</label>
+              <input name="motherName" [(ngModel)]="motherName" type="text" class="form-control" id="motherName_id"  value="{{viewStudent.motherName}}" />
+            </div>
+  
+            <div class="form-group">
+                <label for="lastClassScore">Last Class Score</label>
+                <input name="lastClassScore" [(ngModel)]="lastClassScore" type="text" class="form-control" id="lastClassScore_id"  value="{{viewStudent.lastClassScore}}"  />
+              </div>
+          
+          </div>
+  
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" (click)="onEdit(studentName, category, domicile, birthCertificate, marksheets, policeClearance, passport, declaration, dob, fatherName, motherName, lastClassScore)">Edit</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="onClose()">Close</button> 
+          </div>
+        </div>
+        
+    </div>

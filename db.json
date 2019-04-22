@@ -1,0 +1,131 @@
+{
+  "students": [
+    {
+      "id": 10,
+      "studentName": "Prreti",
+      "category": "International",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": true,
+      "passport": true,
+      "declaration": true,
+      "dob": "2011-12-31",
+      "fatherName": "pl",
+      "motherName": "pl",
+      "lastClassScore": "34"
+    },
+    {
+      "id": 11,
+      "studentName": "golu",
+      "category": "Domestic",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": false,
+      "passport": true,
+      "declaration": true,
+      "dob": "3/10/2010",
+      "fatherName": "kk",
+      "motherName": "vk",
+      "lastClassScore": "56"
+    },
+    {
+      "studentName": "amit khandelwal",
+      "category": "International",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": false,
+      "passport": false,
+      "declaration": false,
+      "dob": null,
+      "fatherName": "Satyanarayan gupta",
+      "motherName": "Anita Gupta",
+      "lastClassScore": 78,
+      "id": 13
+    },
+    {
+      "studentName": "amit",
+      "category": "Domestic",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": true,
+      "passport": false,
+      "declaration": false,
+      "dob": null,
+      "fatherName": "MK",
+      "motherName": "AK",
+      "lastClassScore": 45,
+      "id": 14
+    },
+    {
+      "studentName": "ankit",
+      "category": "International",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": true,
+      "passport": false,
+      "declaration": true,
+      "dob": null,
+      "fatherName": "Satyanarayan gupta",
+      "motherName": "Damini",
+      "lastClassScore": null,
+      "id": 15
+    },
+    {
+      "studentName": "Aditya",
+      "category": "Domestic",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": false,
+      "passport": true,
+      "declaration": true,
+      "dob": null,
+      "fatherName": "Mahesh Kumar gupta",
+      "motherName": "Pk Gupta",
+      "lastClassScore": 78,
+      "id": 16
+    },
+    {
+      "studentName": "varshney",
+      "category": "International",
+      "domicile": true,
+      "birthCertificate": true,
+      "marksheets": true,
+      "policeClearance": true,
+      "passport": true,
+      "declaration": true,
+      "dob": "2012-12-12",
+      "fatherName": "MK",
+      "motherName": "fg ",
+      "lastClassScore": "45",
+      "id": 17
+    }
+  ],
+  "adminCredentials": [
+    {
+      "id": 1,
+      "userName": "nagp",
+      "password": "nagp"
+    },
+    {
+      "id": 2,
+      "userName": "amitkhandelwal",
+      "password": "amitkhandelwal"
+    },
+    {
+      "id": 3,
+      "userName": "angular",
+      "password": "angular"
+    },
+    {
+      "id": 4,
+      "userName": "admin",
+      "password": "admin"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+
+   <div class="modal fade" id="onboardingFormModal" tabindex="-1" role="dialog" aria-labelledby="addNewStudentLabel" >
+      <div class="modal-dialog" role="document">
+      
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" (click)="onClose()">&times;</button>
+            <h4 class="modal-title">Onboarding Form</h4>
+          </div>
+  
+          <div class="modal-body">
+            <form>
+            <div class="form-group">
+              <label for="student name">Student Name</label>
+              <input name="studentName" [(ngModel)]="studentName" type="text" class="form-control" id="studentName_id" placeholder="Student name..."/>
+            </div>
+            
+            <!-- <div class="form-group">
+              <label for="category">Category</label>
+              <input name="category" [(ngModel)]="category" type="category" class="form-control" id="category_id"  placeholder="Category..."/>
+            </div> -->
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select name="category" [(ngModel)]="category" type="category" class="form-control" #t (change)="callType(t.value)" id="category_id"  placeholder="Category..." >
+              <!--  <option>Select departure Category...</option> -->
+              <option *ngFor="let i of categories" [value]="i">{{i}}</option>
+              </select>
+            </div>
+
+            <label class="custom-control-label" for="documents">Documents (* marked fields are mandatory)</label>
+           
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input name="domicile" [(ngModel)]="domicile" type="checkbox" class="custom-control-input" id="domicile_id" required>
+                  <label class="custom-control-label" for="domicile">Domicile*</label>
+                </div>
+              </div>
+  
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="birthCertificate" [(ngModel)]="birthCertificate" type="checkbox" class="custom-control-input" id="birthCertificate_id" required>
+                <label class="custom-control-label" for="birthCertificate">Birth Certificate*</label>
+              </div>
+            </div>
+  
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input name="marksheets" [(ngModel)]="marksheets" type="checkbox" class="custom-control-input" id="marksheets_id" required>
+                  <label class="custom-control-label" for="marksheets">Marksheets*</label>
+                </div>
+            </div>
+  
+            <div *ngIf="category=='International'"class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="policeClearance" [(ngModel)]="policeClearance" type="checkbox" class="custom-control-input" id="policeClearance_id" required>
+                <label class="custom-control-label" for="policeClearance">Police Clearance*</label>
+              </div>
+            </div>
+
+            <div *ngIf="category=='Domestic'"class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="policeClearance" [(ngModel)]="policeClearance" type="checkbox" class="custom-control-input" id="policeClearance_id" required>
+                <label class="custom-control-label" for="policeClearance">Police Clearance</label>
+              </div>
+            </div>
+            
+            <div *ngIf="category=='International'" class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="passport" [(ngModel)]="passport" type="checkbox" class="custom-control-input" id="passport_id" required>
+                <label class="custom-control-label" for="passport">Passport*</label>
+              </div>
+            </div>
+
+            <div *ngIf="category=='Domestic'" class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="passport" [(ngModel)]="passport" type="checkbox" class="custom-control-input" id="passport_id" required>
+                <label class="custom-control-label" for="passport">Passport</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input name="declaration" [(ngModel)]="declaration" type="checkbox" class="custom-control-input" id="declaration_id" required>
+                <label class="custom-control-label" for="declaration">Declaration*</label>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="dob">DOB</label>
+              <input name="dob" [(ngModel)]="dob"  type="date" class="form-control" id="dob_id" placeholder="DOB..."/>
+            </div>
+  
+            <div class="form-group">
+              <label for="fatherName">Father's Name</label>
+              <input name="fatherName" [(ngModel)]="fatherName" type="text" class="form-control" id="fatherName_id" placeholder="Father's Name..."/>
+            </div>
+  
+            <div class="form-group">
+              <label for="motherName">Mother's Name</label>
+              <input name="motherName" [(ngModel)]="motherName" type="text" class="form-control" id="motherName_id" placeholder="Mother's Name..."/>
+            </div>
+  
+            <div class="form-group">
+                <label for="lastClassScore">Last Class Score</label>
+                <input name="lastClassScore" [(ngModel)]="lastClassScore" type="text" class="form-control" id="lastClassScore_id" placeholder="%(marks)"/>
+              </div>
+          
+         
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" (click)="onboardStudent(studentName, category, domicile, birthCertificate, marksheets, policeClearance, passport, declaration, dob, fatherName, motherName, lastClassScore)">Login</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="onClose()">Close</button>
+          </div>
+        </form>
+        </div>
+      </div>
+  
+        
+    </div>
+    

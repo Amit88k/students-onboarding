@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" placeholder="Search by name..."
+          style="width: 44%; margin-left: 5.5%" [(ngModel)]="searchByName" />
+    </div>
+
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" placeholder="Search by category..."
+          style="width: 44%; margin-right: 3.8%" [(ngModel)]="searchByCategory" />
+    </div>
+  </div>
+</div>
+  
+<div class="row" *ngFor="let student of allStudentsData | studentFilter:searchByName | categoryFilter:searchByCategory" style="width:45%; left:20px; display: inline-block; margin-right: 40px;">
+    <div class="col s12 m5" style="width:100%; margin-left: 20px;">
+      <div class="card" style="width:575px; left:20px; display: inline-block; margin-right: 40px; margin-left: 40px;">
+        
+        <div class="card-content" style="background-color: rgb(248, 197, 155); text-align: center; text-emphasis: inherit; text-decoration-color: plum">
+         
+            <span class="card-header" style="text-align: center">{{student.studentName}}</span>
+          
+        </div>
+        <div>
+        <table style="background-color: bisque; width:575px; " >
+          <br>
+            <tbody>
+              <tr style="text-align: 20px; margin-left: 20px;" >
+                <td span class="black-text #b1dcfb studentFatherName" style="text-align: 20px; margin-left: 20px;">FATHER: {{student.fatherName}}</td>
+                <td span class="black-text #b1dcfb studentMotherName">MOTHER: {{student.motherName}}</td>
+                <td span class="black-text #b1dcfb "></td>
+              </tr>
+             <br>
+              <tr>
+                <td span class="black-text #b1dcfb studentDob">DOB: {{student.dob}}</td>
+                <td span class="black-text #b1dcfb studentCategory">CATEGORY: {{student.category}}</td>
+                <td span class="black-text #b1dcfb "></td>
+              </tr>
+              <br>
+              <tr>
+                  <td span class="black-text #b1dcfb studentLastClassScore">LAST CLASS SCORE: {{student.lastClassScore}}</td>
+                  <td span class="black-text #b1dcfb "></td>
+                  <td span class="black-text #b1dcfb "></td>
+              </tr>
+              <br>
+              <tr >
+                <td><button type="submit" class="btn btn-danger" (click)="onDelete(student)">Delete</button></td>
+                <td><button type="button" class="btn btn-primary" (click)="onEdit(student)">Edit</button></td>
+                <td><button type="button" class="btn btn-success" (click)="onView(student)">View</button></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </div>
